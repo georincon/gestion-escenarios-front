@@ -1,0 +1,29 @@
+<h2>Lista de Torneos</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Categoria</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha Fin</th> <!--
+            <th>Municipio</th> -->
+            <th>Acciones</th> 
+        </tr>
+    </thead>
+    <tbody class="h8">
+        <tr *ngFor="let torneo of torneos">
+            <td>{{torneo.nombre}}</td>
+            <td>{{torneo.categoria}}</td> 
+            <td>{{torneo.fechaInicio}}</td>
+            <td>{{torneo.fechaFin}}</td> <!--
+            <td>{{torneo.municipio}}</td> -->
+            <td>
+                <button (click)="actualizarTorneo(torneo.id)" class="btn btn-info btn-sm" style="margin-left : 8px">Editar</button>
+                <button (click)="eliminarTorneo(torneo.id)" class="btn btn-danger btn-sm" style="margin-left : 8px">Eliminar</button>
+                <button (click)="verDetallesDelTorneo(torneo.id)" class="btn btn-primary btn-sm" style="margin-left : 8px">Detalles</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+

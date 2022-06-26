@@ -1,0 +1,122 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Edicion de Colegio Arbitral</h3>
+    <form (ngSubmit)="onSubmit()" #colegioArbitralForm = "ngForm">
+        <div class="form-group">
+            <label>Nit :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="nit"
+            [(ngModel)] = "colegioArbitral.nit"
+            name="nit" 
+            required
+            minlength="7"
+            maxlength="12"
+            placerholder="Digite el Nit "
+            #nit = "ngModel"         
+            >
+        </div>
+        
+        <div class="form-group">
+            <label>Nombre :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="nombre"
+            [(ngModel)] = "colegioArbitral.nombre"
+            name="nombre"
+            required
+            minlength="4"
+            maxlength="10"
+            placerholder="Digite el nombre "
+            #nombre = "ngModel"
+            >
+            <!--            
+            <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                <div *ngIf = "nombre.errors.required" >
+                    Digite su nombre por favor
+                </div> 
+                <div *ngIf = "nombre.errors.minlength" >
+                    El nombre debe contener como minimo 4 caracteres
+                </div>  
+                <div *ngIf = "nombre.errors.maxlength" >
+                    El nombre debe contener como maximo 10 caracteres
+                </div>                
+            </div> 
+        -->
+        </div>
+
+        <div class="form-group">
+            <label>Tipo Persona :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="resolucion"
+            [(ngModel)] = "colegioArbitral.resolucion"
+            name="resolucion"
+            required
+            minlength="3"
+            maxlength="12"
+            placerholder="Digite la resolucion "
+            #resolucion = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Direccion :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="direccion"
+            [(ngModel)] = "colegioArbitral.direccion"
+            name="direccion"
+            required
+            minlength="5"
+            maxlength="50"
+            placerholder="Digite la direccion "
+            #direccion = "ngModel" 
+            >
+        </div>
+    
+        <div class="form-group">
+            <label>Telefono :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="telefono"
+            [(ngModel)] = "colegioArbitral.telefono"
+            name="telefono"
+            required
+            minlength="10"
+            maxlength="20"
+            placerholder="Digite el numero telefonico "
+            #telefono = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Correo :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="correo"
+            [(ngModel)] = "colegioArbitral.correo"
+            name="correo"
+            pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1.5}"
+            required
+            placeholder="Digite el correo"
+            #correo = "ngModel" 
+            >
+        <!--                        
+            <div class="alert alert-danger" *ngIf="correo.invalid && (correo.dirty || correo.touched)">
+                <div *ngIf = "correo.errors.required" >
+                    Digite su correo por favor
+                </div> 
+                <div *ngIf = "correo.errors.pattern" >
+                    Por favor Digite el correo con el siguiente formato  :  user100@gmail.com
+                    <button class="btn btn-success" [disabled]="!patrocinadorForm.form.valid">Guardar</button>
+                </div>              
+            </div> 
+        -->
+        </div>
+
+        <button class="btn btn-success" >Guardar</button>
+    </form>
+
+</div>
+
+

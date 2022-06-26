@@ -1,0 +1,27 @@
+<h2>Lista de Canchas</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Disciplina</th>
+            <th>Cantidad de Espectadores</th>
+            <th>Medidas</th> <!--
+            <th>Escenario</th> -->
+            <th>Acciones</th> 
+        </tr>
+    </thead>
+    <tbody class="h8">
+        <tr *ngFor="let cancha of canchas">
+            <td>{{cancha.nombre}}</td>
+            <td>{{cancha.disciplina}}</td> 
+            <td>{{cancha.cantidadEspec}}</td>
+            <td>{{cancha.medidas}}</td> <!--
+            <td>{{cancha.torneo}}</td> -->
+            <td>
+                <button (click)="actualizarCancha(cancha.id)" class="btn btn-info btn-sm" style="margin-left : 8px">Editar</button>
+                <button (click)="eliminarTorneo(cancha.id)" class="btn btn-danger btn-sm" style="margin-left : 8px">Eliminar</button>
+                <button (click)="verDetallesDelCancha(cancha.id)" class="btn btn-primary btn-sm" style="margin-left : 8px">Detalles</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

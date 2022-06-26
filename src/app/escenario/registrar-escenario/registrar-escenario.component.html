@@ -1,0 +1,59 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de Escenario</h3>
+    <form (ngSubmit)="onSubmit()" #escenarioForm = "ngForm">
+
+        <div class="form-group">
+            <label>Nombre :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="nombre"
+            [(ngModel)] = "escenario.nombre"
+            name="nombre"
+            required
+            minlength="4"
+            maxlength="30"
+            placerholder="Digite el nombre "
+            #nombre = "ngModel"
+            >
+            <!--            
+            <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                <div *ngIf = "nombre.errors.required" >
+                    Digite su nombre por favor
+                </div> 
+                <div *ngIf = "nombre.errors.minlength" >
+                    El nombre debe contener como minimo 4 caracteres
+                </div>  
+                <div *ngIf = "nombre.errors.maxlength" >
+                    El nombre debe contener como maximo 10 caracteres
+                </div>                
+            </div> 
+        -->
+
+        </div>
+    
+        <div class="form-group">
+            <label>Direccion :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="direccion"
+            [(ngModel)] = "escenario.direccion"
+            name="direccion"
+            >
+        </div>
+    
+        <div class="form-group">
+            <label>Telefono :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="telefono"
+            [(ngModel)] = "escenario.telefono"
+            name="telefono"
+            >
+        </div>
+
+        <button class="btn btn-success">Guardar</button>
+    </form>
+
+</div>
+
+

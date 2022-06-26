@@ -1,0 +1,101 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de Patrocinador</h3>
+    <form (ngSubmit)="onSubmit()" #patrocinadorForm = "ngForm">
+        <div class="form-group">
+            <label>Identificacion :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="identificacion"
+            [(ngModel)] = "patrocinador.identificacion"
+            name="identificacion"          
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Nombre :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="nombre"
+            [(ngModel)] = "patrocinador.nombre"
+            name="nombre"
+            required
+            minlength="4"
+            maxlength="10"
+            placerholder="Digite el nombre "
+            #nombre = "ngModel"
+            >
+            <!--            
+            <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                <div *ngIf = "nombre.errors.required" >
+                    Digite su nombre por favor
+                </div> 
+                <div *ngIf = "nombre.errors.minlength" >
+                    El nombre debe contener como minimo 4 caracteres
+                </div>  
+                <div *ngIf = "nombre.errors.maxlength" >
+                    El nombre debe contener como maximo 10 caracteres
+                </div>                
+            </div> 
+        -->
+
+        </div>
+    
+        <div class="form-group">
+            <label>Direccion :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="direccion"
+            [(ngModel)] = "patrocinador.direccion"
+            name="direccion"
+            >
+        </div>
+    
+        <div class="form-group">
+            <label>Telefono :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="telefono"
+            [(ngModel)] = "patrocinador.telefono"
+            name="telefono"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Tipo Persona :</label>
+            <input type="text"
+            class="form-control form-control-smv"
+            id="tipoPersona"
+            [(ngModel)] = "patrocinador.tipoPersona"
+            name="tipoPersona"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Correo :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="correo"
+            [(ngModel)] = "patrocinador.correo"
+            name="correo"
+            pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1.5}"
+            required
+            placeholder="Digite su correo"
+            #correo = "ngModel"
+            >
+        <!--                        
+            <div class="alert alert-danger" *ngIf="correo.invalid && (correo.dirty || correo.touched)">
+                <div *ngIf = "correo.errors.required" >
+                    Digite su correo por favor
+                </div> 
+                <div *ngIf = "correo.errors.pattern" >
+                    Por favor Digite el correo con el siguiente formato  :  user100@gmail.com
+                </div>              
+            </div>
+             <button class="btn btn-success" [disabled]="!patrocinadorForm.form.valid">Guardar</button> 
+        -->
+        </div>
+
+        <button class="btn btn-success">Guardar</button>
+    </form>
+
+</div>

@@ -1,0 +1,100 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Edicion de Cancha</h3>
+    <form (ngSubmit)="onSubmit()" #canchaForm = "ngForm">
+        
+        <div class="form-group">
+            <label>Nombre :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="nombre"
+            [(ngModel)] = "cancha.nombre"
+            name="nombre"
+            required
+            minlength="4"
+            maxlength="10"
+            placerholder="Digite la cancha "
+            #nombre = "ngModel"
+            >
+            <!--            
+            <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                <div *ngIf = "nombre.errors.required" >
+                    Digite su nombre por favor
+                </div> 
+                <div *ngIf = "nombre.errors.minlength" >
+                    El nombre debe contener como minimo 4 caracteres
+                </div>  
+                <div *ngIf = "nombre.errors.maxlength" >
+                    El nombre debe contener como maximo 10 caracteres
+                </div>                
+            </div> 
+        -->
+
+        </div>
+    
+        <div class="form-group">
+            <label>Discplina :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="disciplina"
+            [(ngModel)] = "cancha.disciplina"
+            name="disciplina"
+            required
+            minlength="5"
+            maxlength="50"
+            placerholder="Digite la disciplina "
+            #categoria = "ngModel" 
+            >
+        </div>
+    
+        <div class="form-group">
+            <label>Cantidad de Espectadores :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="cantidadEspec"
+            [(ngModel)] = "cancha.cantidadEspec"
+            name="cantidadEspec"
+            required
+            minlength="10"
+            maxlength="20"
+            placerholder="Digite la cantidad de Espectadores "
+            #cantidadEspec = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Medidas :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="medidas"
+            [(ngModel)] = "cancha.medidas"
+            name="medidas"
+            required
+            minlength="3"
+            maxlength="12"
+            placerholder="Digite las medidas "
+            #medidas = "ngModel" 
+            >
+        </div>
+<!--
+        <div class="form-group">
+            <label>Municipio :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="escenario"
+            [(ngModel)] = "cancha.escenario"
+            name="escenario"
+            required
+            minlength="3"
+            maxlength="12"
+            placerholder="Digite el escenario "
+            #escenario = "ngModel" 
+            >
+        </div>
+-->
+        <button class="btn btn-success" >Guardar</button>
+    </form>
+
+</div>
+
+
+

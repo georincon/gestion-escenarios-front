@@ -1,0 +1,29 @@
+<h2>Lista de Colegios Arbitrales</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nit</th>
+            <th>Nombre</th>
+            <th>Resolucion</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Correo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody class="h6">
+        <tr *ngFor="let colegioArbitral of colegiosArbitrales">
+            <td>{{colegioArbitral.nit}}</td>
+            <td>{{colegioArbitral.nombre}}</td>
+            <td>{{colegioArbitral.resolucion}}</td>
+            <td>{{colegioArbitral.direccion}}</td>
+            <td>{{colegioArbitral.telefono}}</td>
+            <td>{{colegioArbitral.correo}}</td>
+            <td>
+                <button (click)="actualizarColegioArbitral(colegioArbitral.id)" class="btn btn-info btn-sm" style="margin-left : 8px">Editar</button>
+                <button (click)="eliminarColegioArbitral(colegioArbitral.id)" class="btn btn-danger btn-sm" style="margin-left : 8px">Eliminar</button>
+                <button (click)="verDetallesDelColegioArbitral(colegioArbitral.id)" class="btn btn-primary btn-sm" style="margin-left : 8px">Detalles</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,37 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Edicion de Municipio</h3>
+    <form (ngSubmit)="onSubmit()" #municipioForm = "ngForm">
+  
+        <div class="form-group">
+            <label>Nombre :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="nombre"
+            [(ngModel)] = "municipio.nombre"
+            name="nombre"
+            required
+            minlength="4"
+            maxlength="30"
+            placerholder="Digite el nombre del municipio "
+            #nombre = "ngModel"
+            >
+            <!--            
+            <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                <div *ngIf = "nombre.errors.required" >
+                    Digite su nombre por favor
+                </div> 
+                <div *ngIf = "nombre.errors.minlength" >
+                    El nombre debe contener como minimo 4 caracteres
+                </div>  
+                <div *ngIf = "nombre.errors.maxlength" >
+                    El nombre debe contener como maximo 10 caracteres
+                </div>                
+            </div> 
+        -->
+
+        </div>
+    
+        <button class="btn btn-success" >Guardar</button>
+    </form>
+
+</div>

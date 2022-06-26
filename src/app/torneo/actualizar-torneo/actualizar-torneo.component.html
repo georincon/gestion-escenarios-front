@@ -1,0 +1,99 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Edicion de Torneo</h3>
+    <form (ngSubmit)="onSubmit()" #torneoForm = "ngForm">
+        
+        <div class="form-group">
+            <label>Nombre :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="nombre"
+            [(ngModel)] = "torneo.nombre"
+            name="nombre"
+            required
+            minlength="4"
+            maxlength="10"
+            placerholder="Digite el nombre "
+            #nombre = "ngModel"
+            >
+            <!--            
+            <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                <div *ngIf = "nombre.errors.required" >
+                    Digite su nombre por favor
+                </div> 
+                <div *ngIf = "nombre.errors.minlength" >
+                    El nombre debe contener como minimo 4 caracteres
+                </div>  
+                <div *ngIf = "nombre.errors.maxlength" >
+                    El nombre debe contener como maximo 10 caracteres
+                </div>                
+            </div> 
+        -->
+
+        </div>
+    
+        <div class="form-group">
+            <label>Categoria :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="categoria"
+            [(ngModel)] = "torneo.categoria"
+            name="categoria"
+            required
+            minlength="5"
+            maxlength="50"
+            placerholder="Digite la categoria "
+            #categoria = "ngModel" 
+            >
+        </div>
+    
+        <div class="form-group">
+            <label>Fecha de Inicio :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="fechaInicio"
+            [(ngModel)] = "torneo.fechaInicio"
+            name="fechaInicio"
+            required
+            minlength="10"
+            maxlength="20"
+            placerholder="Digite la fecha de inicio "
+            #fechaInicio = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Fecha de finalizacion :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="fechaFin"
+            [(ngModel)] = "torneo.fechaFin"
+            name="fechaFin"
+            required
+            minlength="3"
+            maxlength="12"
+            placerholder="Digite la fecha de finalizacion "
+            #fechaFin = "ngModel" 
+            >
+        </div>
+<!--
+        <div class="form-group">
+            <label>Municipio :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="municipio"
+            [(ngModel)] = "torneo.municipio"
+            name="municipio"
+            required
+            minlength="3"
+            maxlength="12"
+            placerholder="Digite el municipio "
+            #municipio = "ngModel" 
+            >
+        </div>
+-->
+        <button class="btn btn-success" >Guardar</button>
+    </form>
+
+</div>
+
+

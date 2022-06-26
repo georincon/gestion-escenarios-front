@@ -1,0 +1,80 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+  <button style="color: white" mat-button 
+  routerLink="inicio" 
+  routerLinkActive="active" 
+  class="nav-link"
+  >Inicio</button>
+  
+  <button style="color: white" mat-button [matMenuTriggerFor]="crear">Crear</button>
+    <mat-menu #crear="matMenu">
+      <a mat-menu-item routerLink="registrar-municipio" routerLinkActive="active" class="nav-link">Municipios</a>
+      <a mat-menu-item routerLink="registrar-torneo" routerLinkActive="active" class="nav-link">Torneos</a>
+      <button mat-menu-item [matMenuTriggerFor]="escenarios1">Escenarios</button>
+      <a mat-menu-item routerLink="registrar-patrocinador" routerLinkActive="active" class="nav-link">Patrocinadores</a>
+      <button mat-menu-item [matMenuTriggerFor]="equipos1">Equipos</button>
+      <button mat-menu-item [matMenuTriggerFor]="colegios1">Colegios Arbitrales</button>
+    </mat-menu>
+    <mat-menu #escenarios1="matMenu">
+      <a mat-menu-item routerLink="registrar-escenario" routerLinkActive="active" class="nav-link">Escenarios</a>
+      <a mat-menu-item routerLink="registrar-cancha" routerLinkActive="active" class="nav-link">Canchas</a>
+    </mat-menu>
+    <mat-menu #equipos1="matMenu">
+      <a mat-menu-item href="">Equipos</a>
+      <a mat-menu-item href="">Deportistas</a>
+      <a mat-menu-item href="">Entrenadores</a>
+    </mat-menu>
+    <mat-menu #colegios1="matMenu">
+      <a mat-menu-item routerLink="registrar-colegio-arbitral" routerLinkActive="active" class="nav-link">Colegios Arbitrales</a>
+      <a mat-menu-item href="">Arbitros</a>
+    </mat-menu>
+
+  <button style="color: white" mat-button [matMenuTriggerFor]="listar">Administrar</button>
+    <mat-menu #listar="matMenu">
+      <a mat-menu-item routerLink="municipios" routerLinkActive="active" class="nav-link">Municipios</a>
+      <a mat-menu-item routerLink="torneos" routerLinkActive="active" class="nav-link">Torneos</a>
+      <button mat-menu-item [matMenuTriggerFor]="escenarios2">Escenarios</button>
+      <a mat-menu-item routerLink="patrocinadores" routerLinkActive="active" class="nav-link">Patrocinadores</a> 
+      <button mat-menu-item [matMenuTriggerFor]="equipos2">Equipos</button>
+      <button mat-menu-item [matMenuTriggerFor]="colegios2">Colegios Arbitrales</button>
+    </mat-menu>
+    <mat-menu #escenarios2="matMenu">
+      <a mat-menu-item routerLink="escenarios" routerLinkActive="active" class="nav-link">Escenarios</a>
+      <a mat-menu-item routerLink="canchas" routerLinkActive="active" class="nav-link">Canchas</a>
+    </mat-menu>
+    <mat-menu #equipos2="matMenu">
+      <a mat-menu-item href="">Equipos</a>
+      <a mat-menu-item href="">Deportistas</a>
+      <a mat-menu-item href="">Entrenadores</a>
+    </mat-menu>
+    <mat-menu #colegios2="matMenu">
+      <a mat-menu-item routerLink="colegios-arbitrales" routerLinkActive="active" class="nav-link">Colegios Arbitrales</a>
+      <a mat-menu-item href="">Arbitros</a>
+    </mat-menu>
+
+</nav>
+
+<div class="container">
+  <br>
+  <h1 class="text-center"><b>{{title}}</b></h1>
+  <router-outlet></router-outlet>  
+</div>
+
+<!--
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="patrocinadores" routerLinkActive="active" class="nav-link">Lista de patrocinadores</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="registrar-patrocinador" routerLinkActive="active" class="nav-link">Añadir patrocinador</a>
+    </li>
+  </ul> -->
+
+ <!-- <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="patrocinadores" routerLinkActive="active" class="nav-link">Lista de patrocinadores</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="registrar-patrocinador" routerLinkActive="active" class="nav-link">Añadir patrocinador</a>
+    </li>
+  </ul> -->

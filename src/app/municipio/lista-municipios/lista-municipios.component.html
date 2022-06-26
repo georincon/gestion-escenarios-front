@@ -1,0 +1,19 @@
+<h2>Lista de Municipios</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody class="h6">
+        <tr *ngFor="let municipio of municipios">
+            <td>{{municipio.nombre}}</td>
+            <td>
+                <button (click)="actualizarMunicipio(municipio.id)" class="btn btn-info btn-sm" style="margin-left : 8px">Editar</button>
+                <button (click)="eliminarMunicipio(municipio.id)" class="btn btn-danger btn-sm" style="margin-left : 8px">Eliminar</button>
+                <button (click)="verDetallesDelMunicipio(municipio.id)" class="btn btn-primary btn-sm" style="margin-left : 8px">Detalles</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

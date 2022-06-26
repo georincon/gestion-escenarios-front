@@ -20,13 +20,13 @@
       <a mat-menu-item routerLink="registrar-cancha" routerLinkActive="active" class="nav-link">Canchas</a>
     </mat-menu>
     <mat-menu #equipos1="matMenu">
-      <a mat-menu-item href="">Equipos</a>
-      <a mat-menu-item href="">Deportistas</a>
-      <a mat-menu-item href="">Entrenadores</a>
+      <a mat-menu-item routerLink="registrar-equipo" routerLinkActive="active" class="nav-link">Equipos</a>
+      <a mat-menu-item routerLink="registrar-deportista" routerLinkActive="active" class="nav-link">Deportistas</a>
+      <a mat-menu-item routerLink="registrar-entrenador" routerLinkActive="active" class="nav-link">Entrenadores</a>
     </mat-menu>
     <mat-menu #colegios1="matMenu">
       <a mat-menu-item routerLink="registrar-colegio-arbitral" routerLinkActive="active" class="nav-link">Colegios Arbitrales</a>
-      <a mat-menu-item href="">Arbitros</a>
+      <a mat-menu-item routerLink="registrar-arbitro" routerLinkActive="active" class="nav-link">Arbitros</a>
     </mat-menu>
 
   <button style="color: white" mat-button [matMenuTriggerFor]="listar">Administrar</button>
@@ -43,13 +43,13 @@
       <a mat-menu-item routerLink="canchas" routerLinkActive="active" class="nav-link">Canchas</a>
     </mat-menu>
     <mat-menu #equipos2="matMenu">
-      <a mat-menu-item href="">Equipos</a>
-      <a mat-menu-item href="">Deportistas</a>
-      <a mat-menu-item href="">Entrenadores</a>
+      <a mat-menu-item routerLink="equipos" routerLinkActive="active" class="nav-link">Equipos</a>
+      <a mat-menu-item routerLink="deportistas" routerLinkActive="active" class="nav-link">Deportistas</a>
+      <a mat-menu-item routerLink="entrenadores" routerLinkActive="active" class="nav-link">Entrenadores</a>
     </mat-menu>
     <mat-menu #colegios2="matMenu">
       <a mat-menu-item routerLink="colegios-arbitrales" routerLinkActive="active" class="nav-link">Colegios Arbitrales</a>
-      <a mat-menu-item href="">Arbitros</a>
+      <a mat-menu-item routerLink="arbitros" routerLinkActive="active" class="nav-link">Arbitros</a>
     </mat-menu>
 
 </nav>

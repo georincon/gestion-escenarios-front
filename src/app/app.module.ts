@@ -34,6 +34,22 @@ import { ListaCanchasComponent } from './cancha/lista-canchas/lista-canchas.comp
 import { RegistrarCanchaComponent } from './cancha/registrar-cancha/registrar-cancha.component';
 import { ActualizarCanchaComponent } from './cancha/actualizar-cancha/actualizar-cancha.component';
 import { CanchaDetallesComponent } from './cancha/cancha-detalles/cancha-detalles.component';
+import { ListarEquiposComponent } from './equipo/listar-equipos/listar-equipos.component';
+import { RegistrarEquipoComponent } from './equipo/registrar-equipo/registrar-equipo.component';
+import { ActualizarEquipoComponent } from './equipo/actualizar-equipo/actualizar-equipo.component';
+import { EquipoDetallesComponent } from './equipo/equipo-detalles/equipo-detalles.component';
+import { ListaDeportistasComponent } from './deportista/lista-deportistas/lista-deportistas.component';
+import { RegistrarDeportistaComponent } from './deportista/registrar-deportista/registrar-deportista.component';
+import { ActualizarDeportistaComponent } from './deportista/actualizar-deportista/actualizar-deportista.component';
+import { DeportistaDetallesComponent } from './deportista/deportista-detalles/deportista-detalles.component';
+import { ListaEntrenadoresComponent } from './entrenador/lista-entrenadores/lista-entrenadores.component';
+import { RegistrarEntrenadorComponent } from './entrenador/registrar-entrenador/registrar-entrenador.component';
+import { ActualizarEntrenadorComponent } from './entrenador/actualizar-entrenador/actualizar-entrenador.component';
+import { EntrenadorDetallesComponent } from './entrenador/entrenador-detalles/entrenador-detalles.component';
+import { ListaArbitrosComponent } from './arbitro/lista-arbitros/lista-arbitros.component';
+import { RegistrarArbitroComponent } from './arbitro/registrar-arbitro/registrar-arbitro.component';
+import { ActualizarArbitroComponent } from './arbitro/actualizar-arbitro/actualizar-arbitro.component';
+import { ArbitroDetallesComponent } from './arbitro/arbitro-detalles/arbitro-detalles.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +78,23 @@ import { CanchaDetallesComponent } from './cancha/cancha-detalles/cancha-detalle
     ListaCanchasComponent,
     RegistrarCanchaComponent,
     ActualizarCanchaComponent,
-    CanchaDetallesComponent
+    CanchaDetallesComponent,
+    ListarEquiposComponent,
+    RegistrarEquipoComponent,
+    ActualizarEquipoComponent,
+    EquipoDetallesComponent,
+    ListaDeportistasComponent,
+    RegistrarDeportistaComponent,
+    ActualizarDeportistaComponent,
+    DeportistaDetallesComponent,
+    ListaEntrenadoresComponent,
+    RegistrarEntrenadorComponent,
+    ActualizarEntrenadorComponent,
+    EntrenadorDetallesComponent,
+    ListaArbitrosComponent,
+    RegistrarArbitroComponent,
+    ActualizarArbitroComponent,
+    ArbitroDetallesComponent
   ],
   imports: [
     BrowserModule,

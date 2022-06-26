@@ -1,0 +1,25 @@
+<h2>Lista de Equipos</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Deporte</th>
+            <th>Fecha Creacion</th><!--
+            <th>Patrocinador</th> -->
+            <th>Acciones</th> 
+        </tr>
+    </thead>
+    <tbody class="h8">
+        <tr *ngFor="let equipo of equipos">
+            <td>{{equipo.nombre}}</td>
+            <td>{{equipo.deporte}}</td> 
+            <td>{{equipo.fechaCreacion}}</td> <!--
+            <td>{{equipo.patrocinador}}</td> -->
+            <td>
+                <button (click)="actualizarEquipo(equipo.id)" class="btn btn-info btn-sm" style="margin-left : 8px">Editar</button>
+                <button (click)="eliminarEquipo(equipo.id)" class="btn btn-danger btn-sm" style="margin-left : 8px">Eliminar</button>
+                <button (click)="verDetallesDelEquipo(equipo.id)" class="btn btn-primary btn-sm" style="margin-left : 8px">Detalles</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

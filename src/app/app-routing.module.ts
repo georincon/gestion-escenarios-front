@@ -25,6 +25,22 @@ import { ListaCanchasComponent } from './cancha/lista-canchas/lista-canchas.comp
 import { RegistrarCanchaComponent } from './cancha/registrar-cancha/registrar-cancha.component';
 import { ActualizarCanchaComponent } from './cancha/actualizar-cancha/actualizar-cancha.component';
 import { CanchaDetallesComponent } from './cancha/cancha-detalles/cancha-detalles.component';
+import { ListarEquiposComponent } from './equipo/listar-equipos/listar-equipos.component';
+import { RegistrarEquipoComponent } from './equipo/registrar-equipo/registrar-equipo.component';
+import { ActualizarEquipoComponent } from './equipo/actualizar-equipo/actualizar-equipo.component';
+import { EquipoDetallesComponent } from './equipo/equipo-detalles/equipo-detalles.component';
+import { ListaDeportistasComponent } from './deportista/lista-deportistas/lista-deportistas.component';
+import { RegistrarDeportistaComponent } from './deportista/registrar-deportista/registrar-deportista.component';
+import { ActualizarDeportistaComponent } from './deportista/actualizar-deportista/actualizar-deportista.component';
+import { DeportistaDetallesComponent } from './deportista/deportista-detalles/deportista-detalles.component';
+import { ListaEntrenadoresComponent } from './entrenador/lista-entrenadores/lista-entrenadores.component';
+import { RegistrarEntrenadorComponent } from './entrenador/registrar-entrenador/registrar-entrenador.component';
+import { ActualizarEntrenadorComponent } from './entrenador/actualizar-entrenador/actualizar-entrenador.component';
+import { EntrenadorDetallesComponent } from './entrenador/entrenador-detalles/entrenador-detalles.component';
+import { ListaArbitrosComponent } from './arbitro/lista-arbitros/lista-arbitros.component';
+import { RegistrarArbitroComponent } from './arbitro/registrar-arbitro/registrar-arbitro.component';
+import { ActualizarArbitroComponent } from './arbitro/actualizar-arbitro/actualizar-arbitro.component';
+import { ArbitroDetallesComponent } from './arbitro/arbitro-detalles/arbitro-detalles.component';
 
 
 const routes: Routes = [
@@ -53,7 +69,23 @@ const routes: Routes = [
   {path : 'canchas', component: ListaCanchasComponent},
   {path : 'registrar-cancha', component : RegistrarCanchaComponent},
   {path : 'actualizar-cancha/:id', component : ActualizarCanchaComponent},
-  {path : 'cancha-detalles/:id', component : CanchaDetallesComponent}
+  {path : 'cancha-detalles/:id', component : CanchaDetallesComponent},
+  {path : 'equipos', component: ListarEquiposComponent},
+  {path : 'registrar-equipo', component : RegistrarEquipoComponent},
+  {path : 'actualizar-equipo/:id', component : ActualizarEquipoComponent},
+  {path : 'equipo-detalles/:id', component : EquipoDetallesComponent},
+  {path : 'deportistas', component: ListaDeportistasComponent},
+  {path : 'registrar-deportista', component : RegistrarDeportistaComponent},
+  {path : 'actualizar-deportista/:id', component : ActualizarDeportistaComponent},
+  {path : 'deportista-detalles/:id', component : DeportistaDetallesComponent},
+  {path : 'entrenadores', component: ListaEntrenadoresComponent},
+  {path : 'registrar-entrenador', component : RegistrarEntrenadorComponent},
+  {path : 'actualizar-entrenador/:id', component : ActualizarEntrenadorComponent},
+  {path : 'entrenador-detalles/:id', component : EntrenadorDetallesComponent},
+  {path : 'arbitros', component: ListaArbitrosComponent},
+  {path : 'registrar-arbitro', component : RegistrarArbitroComponent},
+  {path : 'actualizar-arbitro/:id', component : ActualizarArbitroComponent},
+  {path : 'arbitro-detalles/:id', component : ArbitroDetallesComponent}
 ];
 
 @NgModule({

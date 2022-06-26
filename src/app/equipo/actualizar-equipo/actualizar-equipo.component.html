@@ -1,17 +1,17 @@
 <div class="col-md-6 offset-md-3">
-    <h3 class="text-center">Registro de Canchas</h3>
-    <form (ngSubmit)="onSubmit()" #canchaForm = "ngForm">
-
+    <h3 class="text-center">Edicion de Equipos</h3>
+    <form (ngSubmit)="onSubmit()" #equipoForm = "ngForm">
+        
         <div class="form-group">
             <label>Nombre :</label>
             <input type="text"
             class="form-control form-control-sm"
             id="nombre"
-            [(ngModel)] = "cancha.nombre"
+            [(ngModel)] = "equipo.nombre"
             name="nombre"
             required
             minlength="4"
-            maxlength="30"
+            maxlength="10"
             placerholder="Digite el nombre "
             #nombre = "ngModel"
             >
@@ -32,59 +32,55 @@
         </div>
     
         <div class="form-group">
-            <label>Disciplina :</label>
+            <label>Deporte :</label>
             <input type="text"
             class="form-control form-control-sm"
-            id="disciplina"
-            [(ngModel)] = "cancha.disciplina"
-            name="disciplina"
+            id="deporte"
+            [(ngModel)] = "equipo.deporte"
+            name="deporte"
+            required
+            minlength="5"
+            maxlength="50"
+            placerholder="Digite el deporte "
+            #deporte = "ngModel" 
             >
         </div>
     
         <div class="form-group">
-            <label>Cantidad de Espectadores :</label>
+            <label>Fecha de Creacion :</label>
             <input type="text"
             class="form-control form-control-sm"
-            id="cantidadEspec"
-            [(ngModel)] = "cancha.cantidadEspec"
-            name="cantidadEspec"
+            id="fechaCreacion"
+            [(ngModel)] = "equipo.fechaCreacion"
+            name="fechaCreacion"
+            required
+            minlength="8"
+            maxlength="20"
+            placerholder="Digite la fecha de creacion "
+            #fechaCreacion = "ngModel" 
             >
         </div>
 
-        <div class="form-group">
-            <label>Medidas :</label>
-            <input type="text"
-            class="form-control form-control-sm"
-            id="medidas"
-            [(ngModel)] = "cancha.medidas"
-            name="medidas"
-            >
-        </div>
-
-        <div class="form-group">
-            <label>Escenario :</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
 <!--
         <div class="form-group">
-            <label>Escenario :</label>
+            <label>Patrocinador :</label>
             <input type="text"
-            class="form-control form-control-smv"
-            id="escenario"
-            [(ngModel)] = "torneo.escenario"
-            name="escenario"
+            class="form-control form-control-sm"
+            id="patrocinador"
+            [(ngModel)] = "equipo.patrocinador"
+            name="patrocinador"
+            required
+            minlength="3"
+            maxlength="12"
+            placerholder="Digite el patrocinador "
+            #patrocinador = "ngModel" 
             >
         </div>
 -->
-        <button class="btn btn-success">Guardar</button>
+        <button class="btn btn-success" >Guardar</button>
     </form>
 
 </div>
+
 
 

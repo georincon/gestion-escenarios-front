@@ -11,7 +11,9 @@ describe('RegistrarEntrenadorComponent', () => {
       declarations: [ RegistrarEntrenadorComponent ]
     })
     .compileComponents();
-
+  });
+   
+  beforeEach( () => {
     fixture = TestBed.createComponent(RegistrarEntrenadorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

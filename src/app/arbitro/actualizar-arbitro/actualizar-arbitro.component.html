@@ -1,1 +1,130 @@
-<p>actualizar-arbitro works!</p>
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Edicion de Arbitro</h3>
+    <form (ngSubmit)="onSubmit()" #arbitroForm = "ngForm">
+            
+        <div class="form-group">
+            <label>Documento :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="documento"
+            [(ngModel)] = "arbitro.documento"
+            name="documento"
+            required
+            minlength="5"
+            maxlength="50"
+            placerholder="Digite el documento "
+            #documento = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Nombre :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="nombre"
+            [(ngModel)] = "arbitro.nombre"
+            name="nombre"
+            required
+            minlength="4"
+            maxlength="10"
+            placerholder="Digite el nombre "
+            #nombre = "ngModel"
+            >
+            <!--            
+            <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                <div *ngIf = "nombre.errors.required" >
+                    Digite su nombre por favor
+                </div> 
+                <div *ngIf = "nombre.errors.minlength" >
+                    El nombre debe contener como minimo 4 caracteres
+                </div>  
+                <div *ngIf = "nombre.errors.maxlength" >
+                    El nombre debe contener como maximo 10 caracteres
+                </div>                
+            </div> 
+        -->
+
+        </div>
+    
+        <div class="form-group">
+            <label>apellidos :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="apellidos"
+            [(ngModel)] = "arbitro.apellidos"
+            name="apellidos"
+            required
+            minlength="5"
+            maxlength="50"
+            placerholder="Digite los apellidos "
+            #apellidos = "ngModel" 
+            >
+        </div>
+    
+        <div class="form-group">
+            <label>Genero :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="genero"
+            [(ngModel)] = "arbitro.genero"
+            name="genero"
+            required
+            minlength="10"
+            maxlength="20"
+            placerholder="Digite el genero "
+            #genero = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Celular :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="celular"
+            [(ngModel)] = "arbitro.celular"
+            name="celular"
+            required
+            minlength="3"
+            maxlength="12"
+            placerholder="Digite el celular "
+            #celular = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Deporte :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="deporte"
+            [(ngModel)] = "arbitro.deporte"
+            name="deporte"
+            required
+            minlength="3"
+            maxlength="12"
+            placerholder="Digite el deporte"
+            #deporte = "ngModel" 
+            >
+        </div>
+<!--
+        <div class="form-group">
+            <label>Municipio :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="municipio"
+            [(ngModel)] = "torneo.municipio"
+            name="municipio"
+            required
+            minlength="3"
+            maxlength="12"
+            placerholder="Digite el municipio "
+            #municipio = "ngModel" 
+            >
+        </div>
+-->
+        <button class="btn btn-success" >Guardar</button>
+    </form>
+
+</div>
+
+
+

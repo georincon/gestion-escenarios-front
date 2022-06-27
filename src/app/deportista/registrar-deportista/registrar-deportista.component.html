@@ -1,1 +1,148 @@
-<p>registrar-deportista works!</p>
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de Deportista</h3>
+    <form (ngSubmit)="onSubmit()" #deportistaForm = "ngForm">
+
+        <div class="form-group">
+            <label>Doumento :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="documento"
+            [(ngModel)] = "deportista.documento"
+            name="documento"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Nombre :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="nombre"
+            [(ngModel)] = "deportista.nombre"
+            name="nombre"
+            required
+            minlength="4"
+            maxlength="30"
+            placerholder="Digite el nombre "
+            #nombre = "ngModel"
+            >
+            <!--            
+            <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                <div *ngIf = "nombre.errors.required" >
+                    Digite su nombre por favor
+                </div> 
+                <div *ngIf = "nombre.errors.minlength" >
+                    El nombre debe contener como minimo 4 caracteres
+                </div>  
+                <div *ngIf = "nombre.errors.maxlength" >
+                    El nombre debe contener como maximo 10 caracteres
+                </div>                
+            </div> 
+        -->
+
+        </div>
+    
+        <div class="form-group">
+            <label>Apellidos :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="apellidos"
+            [(ngModel)] = "deportista.apellidos"
+            name="apellidos"
+            >
+        </div>
+    
+        <div class="form-group">
+            <label>Direccion :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="direccion"
+            [(ngModel)] = "deportista.direccion"
+            name="direccion"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Celular :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="celular"
+            [(ngModel)] = "deportista.celular"
+            name="celular"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Correo :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="correo"
+            [(ngModel)] = "deportista.correo"
+            name="correo"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>RH :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="rh"
+            [(ngModel)] = "deportista.rh"
+            name="rh"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>EPS :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="eps"
+            [(ngModel)] = "deportista.eps"
+            name="eps"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Fecha de Nacimiento :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="fechaNacimiento"
+            [(ngModel)] = "deportista.fechaNacimiento"
+            name="fechaNacimiento"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Genero :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="genero"
+            [(ngModel)] = "deportista.genero"
+            name="genero"
+            >
+        </div>
+<!--
+        <div class="form-group">
+            <label>Equipo :</label>
+            
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              
+            <input type="text"
+            class="form-control form-control-smv"
+            id="equipo"
+            [(ngModel)] = "deportista.equipo"
+            name="equipo"
+            >
+        </div>
+-->
+        <button class="btn btn-success">Guardar</button>
+    </form>
+
+</div>
+
+

@@ -1,1 +1,39 @@
-<p>lista-deportistas works!</p>
+<h2>Lista de Deportistas</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Documento</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Direccion</th>
+            <th>Celular</th>
+            <th>Correo</th>
+            <th>RH</th>
+            <th>EPS</th>
+            <th>Fecha de Nacimiento</th> 
+            <th>Genero</th>      <!--
+            <th>Municipio</th> -->
+            <th>Acciones</th> 
+        </tr>
+    </thead>
+    <tbody class="h8">
+        <tr *ngFor="let deportista of deportistas">
+            <td>{{deportista.documento}}</td>
+            <td>{{deportista.nombre}}</td> 
+            <td>{{deportista.apellidos}}</td>
+            <td>{{deportista.direccion}}</td> 
+            <td>{{deportista.celular}}</td>
+            <td>{{deportista.correo}}</td>
+            <td>{{deportista.rh}}</td>
+            <td>{{deportista.eps}}</td> 
+            <td>{{deportista.fechaNacimiento}}</td>
+            <td>{{deportista.genero}}</td> <!--
+            <td>{{deportista.equipo}}</td> -->
+            <td>
+                <button (click)="actualizarDeportista(deportista.id)" class="btn btn-info btn-sm" style="margin-left : 8px">Editar</button>
+                <button (click)="eliminarDeportista(deportista.id)" class="btn btn-danger btn-sm" style="margin-left : 8px">Eliminar</button>
+                <button (click)="verDetallesDelDeportista(deportista.id)" class="btn btn-primary btn-sm" style="margin-left : 8px">Detalles</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

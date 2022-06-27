@@ -11,7 +11,9 @@ describe('ActualizarDeportistaComponent', () => {
       declarations: [ ActualizarDeportistaComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(ActualizarDeportistaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

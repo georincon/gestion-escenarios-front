@@ -11,7 +11,9 @@ describe('ActualizarEntrenadorComponent', () => {
       declarations: [ ActualizarEntrenadorComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(ActualizarEntrenadorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

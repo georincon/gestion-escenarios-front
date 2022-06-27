@@ -11,7 +11,9 @@ describe('ListaDeportistasComponent', () => {
       declarations: [ ListaDeportistasComponent ]
     })
     .compileComponents();
-
+  });
+  
+  beforeEach(() => {
     fixture = TestBed.createComponent(ListaDeportistasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

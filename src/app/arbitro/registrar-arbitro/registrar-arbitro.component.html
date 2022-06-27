@@ -1,1 +1,108 @@
-<p>registrar-arbitro works!</p>
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de Arbitro</h3>
+    <form (ngSubmit)="onSubmit()" #arbitroForm = "ngForm">
+
+        <div class="form-group">
+            <label>Documento :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="documento"
+            [(ngModel)] = "arbitro.documento"
+            name="documento"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Nombre :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="nombre"
+            [(ngModel)] = "arbitro.nombre"
+            name="nombre"
+            required
+            minlength="4"
+            maxlength="30"
+            placerholder="Digite el nombre "
+            #nombre = "ngModel"
+            >
+            <!--            
+            <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                <div *ngIf = "nombre.errors.required" >
+                    Digite su nombre por favor
+                </div> 
+                <div *ngIf = "nombre.errors.minlength" >
+                    El nombre debe contener como minimo 4 caracteres
+                </div>  
+                <div *ngIf = "nombre.errors.maxlength" >
+                    El nombre debe contener como maximo 10 caracteres
+                </div>                
+            </div> 
+        -->
+
+        </div>
+    
+        <div class="form-group">
+            <label>Apellidos :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="apellidos"
+            [(ngModel)] = "arbitro.apellidos"
+            name="apellidos"
+            >
+        </div>
+    
+        <div class="form-group">
+            <label>Genero :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="genero"
+            [(ngModel)] = "arbitro.genero"
+            name="genero"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Celular :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="celular"
+            [(ngModel)] = "arbitro.celular"
+            name="celular"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Deporte :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="deporte"
+            [(ngModel)] = "arbitro.deporte"
+            name="deporte"
+            >
+        </div>
+<!--
+        <div class="form-group">
+            <label>colegio Arbitral :</label>
+            
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              
+            <input type="text"
+            class="form-control form-control-smv"
+            id="colegioArbitral"
+            [(ngModel)] = "arbitro.colegioArbitral"
+            name="colegioArbitral"
+            >
+        </div>
+-->
+        <button class="btn btn-success">Guardar</button>
+    </form>
+
+</div>
+
+

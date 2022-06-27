@@ -11,7 +11,9 @@ describe('ActualizarArbitroComponent', () => {
       declarations: [ ActualizarArbitroComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(ActualizarArbitroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

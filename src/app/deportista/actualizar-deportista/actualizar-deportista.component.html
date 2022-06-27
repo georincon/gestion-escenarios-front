@@ -1,1 +1,190 @@
-<p>actualizar-deportista works!</p>
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Edicion de Deportista</h3>
+    <form (ngSubmit)="onSubmit()" #deportistaForm = "ngForm">
+        
+        <div class="form-group">
+            <label>Documento :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="documento"
+            [(ngModel)] = "deportista.documento"
+            name="documento"
+            required
+            minlength="5"
+            maxlength="50"
+            placerholder="Digite el documento "
+            #documento = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Nombre :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="nombre"
+            [(ngModel)] = "deportista.nombre"
+            name="nombre"
+            required
+            minlength="4"
+            maxlength="10"
+            placerholder="Digite el nombre "
+            #nombre = "ngModel"
+            >
+            <!--            
+            <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                <div *ngIf = "nombre.errors.required" >
+                    Digite su nombre por favor
+                </div> 
+                <div *ngIf = "nombre.errors.minlength" >
+                    El nombre debe contener como minimo 4 caracteres
+                </div>  
+                <div *ngIf = "nombre.errors.maxlength" >
+                    El nombre debe contener como maximo 10 caracteres
+                </div>                
+            </div> 
+        -->
+
+        </div>
+    
+        <div class="form-group">
+            <label>Apellidos :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="apellidos"
+            [(ngModel)] = "deportista.apellidos"
+            name="apellidos"
+            required
+            minlength="10"
+            maxlength="20"
+            placerholder="Digite los apellidos "
+            #apellidos = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Direccion :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="direccion"
+            [(ngModel)] = "deportista.direccion"
+            name="direccion"
+            required
+            minlength="3"
+            maxlength="12"
+            placerholder="Digite la direccion "
+            #direccion = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Celular :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="celular"
+            [(ngModel)] = "deportista.celular"
+            name="celular"
+            required
+            minlength="10"
+            maxlength="20"
+            placerholder="Digite el numero celular "
+            #celular = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Correo :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="correo"
+            [(ngModel)] = "deportista.correo"
+            name="correo"
+            required
+            minlength="3"
+            maxlength="12"
+            placerholder="Digite el correo "
+            #correo = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>RH :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="rh"
+            [(ngModel)] = "deportista.rh"
+            name="rh"
+            required
+            minlength="10"
+            maxlength="20"
+            placerholder="Digite el RH "
+            #rh = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>EPS :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="eps"
+            [(ngModel)] = "deportista.eps"
+            name="eps"
+            required
+            minlength="3"
+            maxlength="12"
+            placerholder="Digite la EPS "
+            #eps = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Fecha de Nacimiento :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="fechaNacimiento"
+            [(ngModel)] = "deportista.fechaNacimiento"
+            name="fechaNacimiento"
+            required
+            minlength="10"
+            maxlength="20"
+            placerholder="Digite la fecha de Nacimiento"
+            #fechaNacimiento = "ngModel" 
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Genero :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="genero"
+            [(ngModel)] = "deportista.genero"
+            name="genero"
+            required
+            minlength="3"
+            maxlength="12"
+            placerholder="Digite el genero "
+            #genero = "ngModel" 
+            >
+        </div>
+<!--
+        <div class="form-group">
+            <label>Equipo :</label>
+            <input type="text"
+            class="form-control form-control-sm"
+            id="equipo"
+            [(ngModel)] = "deportista.equipo""
+            name="equipo""
+            required
+            minlength="3"
+            maxlength="12"
+            placerholder="Digite el equipo" "
+            #equipo" = "ngModel" 
+            >
+        </div>
+-->
+        <button class="btn btn-success" >Guardar</button>
+    </form>
+
+</div>
+
+
+

@@ -9,7 +9,7 @@ import { Patrocinador } from './patrocinador';
 export class PatrocinadorService {
 
   //Esta URL obtiene el listado de todos los patrocinadores en el backend
-  private baseURL = "http://localhost:8080/api/patrocinadores";
+  private baseURL = "https://gestion-escenarios-backend.herokuapp.com/api/patrocinadores";
 
   constructor(private httpClient : HttpClient) { }
 

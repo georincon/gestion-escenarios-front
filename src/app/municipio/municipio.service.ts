@@ -9,7 +9,7 @@ import { Municipio } from './municipio';
 export class MunicipioService {
 
   //Esta URL obtiene el listado de todos los municipios en el backend
-  private baseURL = "http://localhost:8080/api/municipios";
+  private baseURL = "https://gestion-escenarios-backend.herokuapp.com/api/municipios";
 
   constructor(private httpClient : HttpClient) { }
 

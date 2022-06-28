@@ -9,7 +9,7 @@ import { ColegioArbitral } from './colegio-arbitral';
 export class ColegioArbitralService {
 
   //Esta URL obtiene el listado de todos los colegios arbitrales en el backend
-  private baseURL = "http://localhost:8080/api/colegios_arbitrales";
+  private baseURL = "https://gestion-escenarios-backend.herokuapp.com/api/colegios_arbitrales";
 
   constructor(private httpClient : HttpClient) { }
 

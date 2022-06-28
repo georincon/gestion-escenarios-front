@@ -9,7 +9,7 @@ import { Torneo } from './torneo';
 export class TorneoService {
 
   //Esta URL obtiene el listado de todos los torneos en el backend
-  private baseURL = "http://localhost:8080/api/torneos";
+  private baseURL = "https://gestion-escenarios-backend.herokuapp.com/api/torneos";
 
   constructor(private httpClient : HttpClient) { }
 

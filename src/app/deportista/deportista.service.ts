@@ -9,7 +9,7 @@ import { Deportista } from './deportista';
 export class DeportistaService {
 
   //Esta URL obtiene el listado de todos los deportistas en el backend
-  private baseURL = "http://localhost:8080/api/deportistas";
+  private baseURL = "https://gestion-escenarios-backend.herokuapp.com/api/deportistas";
 
   constructor(private httpClient : HttpClient) { }
 

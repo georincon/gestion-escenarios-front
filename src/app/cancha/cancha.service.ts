@@ -10,7 +10,7 @@ export class CanchaService {
 
 
   //Esta URL obtiene el listado de todas las canchas en el backend
-  private baseURL = "http://localhost:8080/api/canchas";
+  private baseURL = "https://gestion-escenarios-backend.herokuapp.com/api/canchas";
 
   constructor(private httpClient : HttpClient) { }
 

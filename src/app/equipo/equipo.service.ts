@@ -9,7 +9,7 @@ import { Equipo } from './equipo';
 export class EquipoService {
 
   //Esta URL obtiene el listado de todos los equipos en el backend
-  private baseURL = "http://localhost:8080/api/equipos";
+  private baseURL = "https://gestion-escenarios-backend.herokuapp.com/api/equipos";
 
   constructor(private httpClient : HttpClient) { }
 

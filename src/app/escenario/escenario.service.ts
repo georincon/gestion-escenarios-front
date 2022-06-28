@@ -9,7 +9,7 @@ import { Escenario } from './escenario';
 export class EscenarioService {
 
   //Esta URL obtiene el listado de todos los escenarios en el backend
-  private baseURL = "http://localhost:8080/api/escenarios";
+  private baseURL = "https://gestion-escenarios-backend.herokuapp.com/api/escenarios";
 
   constructor(private httpClient : HttpClient) { }
 

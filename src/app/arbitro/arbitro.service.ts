@@ -9,7 +9,7 @@ import { Arbitro } from './arbitro';
 export class ArbitroService {
 
   //Esta URL obtiene el listado de todos los arbitros en el backend
-  private baseURL = "http://localhost:8080/api/arbitros";
+  private baseURL = "https://gestion-escenarios-backend.herokuapp.com/api/arbitros";
 
   constructor(private httpClient : HttpClient) { }
 

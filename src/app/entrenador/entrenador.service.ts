@@ -10,7 +10,7 @@ export class EntrenadorService {
 
 
   //Esta URL obtiene el listado de todos los entrenadores en el backend
-  private baseURL = "http://localhost:8080/api/entrenadores";
+  private baseURL = "https://gestion-escenarios-backend.herokuapp.com/api/entrenadores";
 
   constructor(private httpClient : HttpClient) { }
 

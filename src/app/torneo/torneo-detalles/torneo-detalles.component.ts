@@ -12,7 +12,7 @@ import { TorneoService } from '../torneo.service';
 export class TorneoDetallesComponent implements OnInit {
 
   id:number;
-  torneo:Torneo;
+  torneo:any;
   constructor(private route:ActivatedRoute,private torneoServicio:TorneoService) { }
 
   ngOnInit(): void {

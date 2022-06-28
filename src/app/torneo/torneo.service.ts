@@ -19,7 +19,7 @@ export class TorneoService {
   }
 
   //Esta metodo nos sirve para registrar un torneo
-  registrarTorneo(torneo:Torneo):Observable<Object>{
+  registrarTorneo(torneo:any):Observable<Object>{
     return this.httpClient.post(`${this.baseURL}`,torneo)
   }
 

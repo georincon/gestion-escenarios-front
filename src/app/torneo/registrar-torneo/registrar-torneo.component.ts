@@ -32,8 +32,17 @@ export class RegistrarTorneoComponent implements OnInit {
 
   guardarTorneo(){
     console.log(this.torneo);
-    this.torneoServicio.registrarTorneo(this.torneo).subscribe(dato => {
-      console.log(dato);
+    let tornen = {
+      nombre:  this.torneo.nombre,
+      categoria: this.torneo.categoria,
+      fechaFin: this.torneo.fechaFin,
+      fechaInicio: this.torneo.fechaInicio,
+      municipio: {
+        id: Number(this.torneo.fk_municipio),
+      }
+    }
+      this.torneoServicio.registrarTorneo(tornen).subscribe(dato => {
+      console.log(dato); 
       this.irAlaListaDeTorneos();
     },error => console.log(error))
   }

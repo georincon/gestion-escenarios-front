@@ -16,7 +16,7 @@
             <td>{{torneo.categoria}}</td> 
             <td>{{torneo.fechaInicio}}</td>
             <td>{{torneo.fechaFin}}</td> 
-            <td>{{torneo.fk_municipio}}</td> 
+            <td>{{torneo.municipio?.nombre}}</td> 
             <td width="15%">  
                 <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
                     <button (click)="actualizarTorneo(torneo.id)" class="btn btn-info">Editar</button>

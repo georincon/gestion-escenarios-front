@@ -107,7 +107,7 @@
                 placeholder="Seleccione el municipio por favor" 
                 #fk_municipio = "ngModel"       
             >
-                <option value="{muni.id}" *ngFor="let muni of listadoMunicipios">
+                <option value="{{muni.id}}" *ngFor="let muni of listadoMunicipios">
                     {{ muni.nombre }}
                 </option>
             </select>

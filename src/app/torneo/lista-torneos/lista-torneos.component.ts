@@ -11,7 +11,7 @@ import { TorneoService } from '../torneo.service';
 })
 export class ListaTorneosComponent implements OnInit {
 
-  torneos:Torneo[];
+  torneos:any[];
 
   constructor(private torneoServicio:TorneoService,private router:Router) { }
 

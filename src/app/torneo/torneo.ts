@@ -1,3 +1,5 @@
+import { Municipio } from "../municipio/municipio";
+
 export class Torneo {
 
     id:number;
@@ -5,6 +7,6 @@ export class Torneo {
     categoria:string;
     fechaInicio:string;
     fechaFin:string;
-    fk_municipio:number;
+    fk_municipio: number;
     
 }

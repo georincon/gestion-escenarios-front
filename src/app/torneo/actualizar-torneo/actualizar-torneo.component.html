@@ -99,13 +99,13 @@
         <label><b>Municipio :</b></label>
         <select class="form-control form-control-sm"
             required 
-            [(ngModel)] = "torneo.fk_municipio"  
+            [(ngModel)] = "torneo.municipio.id"  
             id="fk_municipio"  
             name="fk_municipio"
             placeholder="Seleccione el municipio por favor" 
             #fk_municipio = "ngModel"       
         >
-            <option value="{muni.id}" *ngFor="let muni of listadoMunicipios">
+            <option value="{{muni.id}}" *ngFor="let muni of listadoMunicipios">
                 {{ muni.nombre }}
             </option>
         </select>

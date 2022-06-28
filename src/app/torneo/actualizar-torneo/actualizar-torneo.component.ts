@@ -15,7 +15,7 @@ export class ActualizarTorneoComponent implements OnInit {
 
   id:number;
    listadoMunicipios: Municipio[];
-  torneo : Torneo = new Torneo();
+  torneo : any;
   
   constructor(
     private municipioService:MunicipioService, 

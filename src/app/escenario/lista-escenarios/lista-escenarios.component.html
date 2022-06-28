@@ -15,10 +15,15 @@
             <td>{{escenario.direccion}}</td> 
             <td>{{escenario.telefono}}</td> <!--
             <td>{{escenario.torneo}}</td> -->
+            <td width="15%">  
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
+                    <button (click)="actualizarEscenario(escenario.id)" class="btn btn-info">Editar</button>
+                    <button (click)="eliminarEscenario(escenario.id)" class="btn btn-danger">Eliminar</button>
+                    <button (click)="verDetallesDelEscenario(escenario.id)" class="btn btn-primary">Detalles</button>
+                </div>
+            </td>
             <td>
-                <button (click)="actualizarEscenario(escenario.id)" class="btn btn-info btn-sm" style="margin-left : 8px">Editar</button>
-                <button (click)="eliminarEscenario(escenario.id)" class="btn btn-danger btn-sm" style="margin-left : 8px">Eliminar</button>
-                <button (click)="verDetallesDelEscenario(escenario.id)" class="btn btn-primary btn-sm" style="margin-left : 8px">Detalles</button>
+                
             </td>
         </tr>
     </tbody>

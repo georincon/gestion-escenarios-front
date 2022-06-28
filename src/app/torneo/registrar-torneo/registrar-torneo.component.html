@@ -1,9 +1,9 @@
 <div class="col-md-6 offset-md-3">
-    <h3 class="text-center">Registro de Torneo</h3>
+    <h2 class="text-center">Registro de Torneo</h2>
     <form (ngSubmit)="onSubmit()" #torneoForm = "ngForm">
 
         <div class="form-group">
-            <label>Nombre :</label>
+            <label><b>Nombre :</b></label>
             <input type="text"
             class="form-control form-control-sm"
             id="nombre"
@@ -12,74 +12,113 @@
             required
             minlength="4"
             maxlength="30"
-            placerholder="Digite el nombre "
+            placerholder="Digite el nombre del torneo"
             #nombre = "ngModel"
-            >
-            <!--            
+            pattern="[a-zA-Z0-9ñÑ ]+$"
+	        >
             <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
-                <div *ngIf = "nombre.errors.required" >
-                    Digite su nombre por favor
+                <div *ngIf="nombre.errors?.['required']">
+                    Digite el nombre por favor
                 </div> 
-                <div *ngIf = "nombre.errors.minlength" >
+                <div *ngIf = "nombre.errors?.['minlength']" >
                     El nombre debe contener como minimo 4 caracteres
                 </div>  
-                <div *ngIf = "nombre.errors.maxlength" >
-                    El nombre debe contener como maximo 10 caracteres
-                </div>                
+                <div *ngIf = "nombre.errors?.['maxlength']">
+                    El nombre debe contener como maximo 30 caracteres
+                </div>  
+		        <div *ngIf="nombre.errors?.['pattern']">
+                    numeros no permitidos.
+                </div>              
             </div> 
-        -->
-
         </div>
     
         <div class="form-group">
-            <label>Categoria :</label>
-            <input type="text"
-            class="form-control form-control-sm"
-            id="categoria"
-            [(ngModel)] = "torneo.categoria"
-            name="categoria"
+            <label><b>Categoria :</b></label>
+            <select class="form-control form-control-sm custom-select"
+                required
+                id="categoria"
+                [(ngModel)] = "torneo.categoria"
+                name="categoria"
+                placerholder="Seleccione la Categoria"
+                #categoria = "ngModel"
             >
+                <option value="" disabled selected>Seleccione la Categoria</option>
+                <option value="Infantil">Infantil</option>
+                <option value="Juvenil">Juvenil</option>
+                <option value="Mayores">Mayores</option>
+                <option value="Senior">Senior</option>
+            </select>
+            <div class="alert alert-danger" *ngIf="categoria.invalid && (categoria.dirty || categoria.touched)">
+                <div *ngIf="categoria.errors?.['required']">
+                    Digite la categoria por favor
+                </div> 
+            </div>
         </div>
     
         <div class="form-group">
-            <label>Fecha de inicio :</label>
-            <input type="text"
+            <label><b>Fecha de inicio :</b></label>
+            <input type="date"
             class="form-control form-control-sm"
+            required
             id="fechaInicio"
             [(ngModel)] = "torneo.fechaInicio"
             name="fechaInicio"
+            placeholder="yyyy-mm-dd" 
+            value="2022-06-15" 
+            min="2022-01-01" 
+            max="2050-12-31"
+            #fechaInicio = "ngModel"
             >
+            <div class="alert alert-danger" *ngIf="fechaInicio.invalid && (fechaInicio.dirty || fechaInicio.touched)">
+                <div *ngIf="fechaInicio.errors?.['required']">
+                    Seleccione la fecha por favor
+                </div> 
+            </div>
         </div>
 
         <div class="form-group">
-            <label>Fecha de finalizacion :</label>
-            <input type="text"
+            <label><b>Fecha de finalizacion :</b></label>
+            <input type="date"
             class="form-control form-control-sm"
+            required
             id="fechaFin"
             [(ngModel)] = "torneo.fechaFin"
             name="fechaFin"
+            placeholder="dd-mm-yyyy" 
+            value="" 
+            min="1997-01-01" 
+            max="2030-12-31"
+            #fechaFin = "ngModel"
             >
+            <div class="alert alert-danger" *ngIf="fechaInicio.invalid && (fechaInicio.dirty || fechaInicio.touched)">
+                <div *ngIf="fechaInicio.errors?.['required']">
+                    Seleccione la fecha por favor
+                </div> 
+            </div>            
         </div>
-<!--
+      
         <div class="form-group">
-            <label>Municipio :</label>
-            
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              
-            <input type="text"
-            class="form-control form-control-smv"
-            id="municipio"
-            [(ngModel)] = "torneo.municipio"
-            name="municipio"
+            <label><b>Municipio :</b></label>
+            <select class="form-control form-control-sm"
+                required 
+                [(ngModel)] = "torneo.fk_municipio"  
+                id="fk_municipio"  
+                name="fk_municipio"
+                placeholder="Seleccione el municipio por favor" 
+                #fk_municipio = "ngModel"       
             >
-        </div>
--->
+                <option [value]="muni.id" *ngFor="let muni of listadoMunicipios">
+                    {{ muni.nombre }}
+                </option>
+            </select>
+          
+            <div class="alert alert-danger" *ngIf="fk_municipio.invalid && (fk_municipio.dirty || fk_municipio.touched)">
+                <div>
+                    Seleccione el municipio por favor
+                </div> 
+            </div>
+        </div> 
+        <br>
         <button class="btn btn-success">Guardar</button>
     </form>
 

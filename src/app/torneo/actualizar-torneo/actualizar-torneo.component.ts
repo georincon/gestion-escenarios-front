@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Torneo } from '../torneo';
 import { TorneoService } from '../torneo.service';
+import { Municipio } from '../../municipio/municipio'
+import { MunicipioService } from 'src/app/municipio/municipio.service';
 
 @Component({
   selector: 'app-actualizar-torneo',
@@ -12,10 +14,24 @@ import { TorneoService } from '../torneo.service';
 export class ActualizarTorneoComponent implements OnInit {
 
   id:number;
-  torneo:Torneo = new Torneo();
-  constructor(private torneoServicio:TorneoService,private router:Router,private route:ActivatedRoute) { }
+   listadoMunicipios: Municipio[];
+  torneo : Torneo = new Torneo();
+  
+  constructor(
+    private municipioService:MunicipioService, 
+    private torneoServicio:TorneoService, 
+    private router:Router,
+    private route:ActivatedRoute
+    ) {}
+ 
 
   ngOnInit(): void {
+    console.log(this.torneo);
+    this.municipioService.obtenerListaDeMunicipios().subscribe(datos => {
+      this.listadoMunicipios = datos;
+      console.log(datos);
+    });
+
     this.id = this.route.snapshot.params['id'];
     this.torneoServicio.obtenerTorneoPorId(this.id).subscribe(dato =>{
       this.torneo = dato;

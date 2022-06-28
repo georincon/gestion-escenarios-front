@@ -17,10 +17,12 @@
             <td>{{cancha.cantidadEspec}}</td>
             <td>{{cancha.medidas}}</td> <!--
             <td>{{cancha.torneo}}</td> -->
-            <td>
-                <button (click)="actualizarCancha(cancha.id)" class="btn btn-info btn-sm" style="margin-left : 8px">Editar</button>
-                <button (click)="eliminarTorneo(cancha.id)" class="btn btn-danger btn-sm" style="margin-left : 8px">Eliminar</button>
-                <button (click)="verDetallesDelCancha(cancha.id)" class="btn btn-primary btn-sm" style="margin-left : 8px">Detalles</button>
+            <td width="15%">  
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
+                    <button (click)="actualizarCancha(cancha.id)" class="btn btn-info">Editar</button>
+                    <button (click)="eliminarTorneo(cancha.id)" class="btn btn-danger">Eliminar</button>
+                    <button (click)="verDetallesDelCancha(cancha.id)" class="btn btn-primary">Detalles</button>
+                </div>
             </td>
         </tr>
     </tbody>
